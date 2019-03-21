@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="funcoes.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<script src="js/jquery.countdown.js"></script>
+	
+</head>
+<body >
+	<div class="w3-container w3-padding w3-margin-top w3-teal">
+		<div class="w3-half w3-letf w3-padding">
+			<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-block w3-teal w3-round-large w3-hover-teal">Criar Tarefa</button>
+		</div>
+		<div class="w3-half ">
+			<div class="w3-half w3-padding">
+				<input oninput="w3.filterHTML('#tblListar', 'li', this.value)" class="w3-input w3-border w3-round-large" placeholder="Pesquise...">
+			</div>
+
+			<div class="w3-half w3-padding">
+				<input oninput="w3.filterHTML('#tblListar', 'li', this.value)" class="w3-input w3-border w3-round-large" placeholder="#...">
+			</div>
+		</div>
+	</div>
+
+
+	<div id="id01" class="w3-modal w3-round-large" >
+
+		<div class="w3-modal-content w3-animate-zoom w3-card-4 w3-round-large" style="width: 450px;">
+
+			<header class="w3-container w3-teal w3-round"> 
+				<span onclick="document.getElementById('id01').style.display='none'" 
+				class="w3-button w3-display-topright w3-round-large">&times;</span>
+				<h2>Adicione sua tarefa</h2>
+			</header>
+			<div class="w3-container w3-padding" >
+
+				<form id="frmCadastro">
+
+					<p><input id="descricao" placeholder="Descrição" class="w3-input"></input></p>
+					<p><input type="date" id="data" placeholder="Data" class="w3-input"></p>
+					<div class="w3-row-padding">
+						<div class="w3-half">
+							<p><label>Início</label><input type="time" id="time" class="w3-input"></p>
+						</div>
+						<div class="w3-half">
+							<p><label>Término</label><input type="time" id="time2" class="w3-input"></p>
+						</div>
+					</div>
+					<p><textarea id="tag" class="w3-input w3-border w3-round" placeholder="Tags"></textarea></p>
+					<p>
+						<button id="btnSalvar" class="create w3-btn w3-round-large w3-right w3-teal w3-center" type="submit"  >Salvar</button>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<ul id="tblListar" class="here "></ul>
+
+
+</body>
+</html>

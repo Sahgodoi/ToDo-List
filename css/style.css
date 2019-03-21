@@ -1,0 +1,20 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+}
+ul{
+	list-style:none;	
+}
+
+span{
+	color: gray;
+	text-align: left;
+}
+
+ textarea  {
+ 	resize: none;
+ 	width: 100%;
+
+ }
